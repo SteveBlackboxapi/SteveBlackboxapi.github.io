@@ -1,2 +1,3 @@
-# SteveBlackboxapi.github.io
-Public preview host for Foam homepage concept
+Foam homepage concept preview.
+
+Live: https://steveblackboxapi.github.io/
