@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <title>BAR FIGHTER 2</title>
+  <style>
+    :root { color-scheme: dark; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body {
+      height: 100%;
+      background: #07060a;
+      color: #f4e6c3;
+      font-family: ui-monospace, Menlo, monospace;
+      overflow: hidden;
+      user-select: none;
+      touch-action: none;
+    }
+    #wrap {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 12px;
+    }
+    canvas {
+      image-rendering: pixelated;
+      image-rendering: crisp-edges;
+      background: #1a1010;
+      width: min(96vw, calc(96vh * 16 / 9));
+      height: min(calc(96vw * 9 / 16), 78vh);
+      box-shadow: 0 0 0 3px #3a2010, 0 0 40px #000;
+    }
+    #hud {
+      width: min(96vw, calc(96vh * 16 / 9));
+      display: flex;
+      justify-content: space-between;
+      font-size: 12px;
+      opacity: 0.85;
+    }
+    #hud span { color: #c9a66b; }
+    .hint { font-size: 12px; line-height: 1.6; text-align: center; max-width: 720px; color: #9a7a4a; }
+  </style>
+</head>
+<body>
+  <div id="wrap">
+    <canvas id="game" width="384" height="216"></canvas>
+    <div id="hud">
+      <div>P1 <span id="p1dev">keyboard</span></div>
+      <div>pads <span id="pads">0</span></div>
+      <div>P2 <span id="p2dev">keyboard</span></div>
+    </div>
+    <p class="hint">
+      Pair pads in Mac Bluetooth settings, then press any button in this tab (Chrome works best).<br />
+      Keyboard: P1 WASD + J punch K kick L special &nbsp;|&nbsp; P2 arrows + num1 punch num2 kick num3 special
+    </p>
+  </div>
+  <script src="game.js"></script>
+</body>
+</html>
